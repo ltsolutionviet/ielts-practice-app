@@ -59,7 +59,7 @@
     <div id="hint8" style="display:block;" class="hint">Do you think that the city where you live is
       a dangerous place?
     </div>
-    &emsp;&emsp; <input type="checkbox" name="q0ok" checked="checked" disabled="disabled"> <strong>give
+    <br>&emsp;&emsp; <input type="checkbox" name="q0ok" checked="checked" disabled="disabled"> <strong>give
       a reason</strong>
     <br> &emsp;&emsp; <input type="checkbox" name="q0ok" checked="checked" disabled="disabled">
     <strong>give an opinion </strong>
@@ -257,7 +257,7 @@
     <div id="hint4" style="display:none;" class="hint">Do you like to study alone or with your
       friends?
     </div>
-    <br><br>&emsp;&emsp; <input type="checkbox" name="q4wrong"> describe
+    <br>&emsp;&emsp; <input type="checkbox" name="q4wrong"> describe
     <br> &emsp;&emsp; <input type="checkbox" name="q4ok" id="4a"> give a preference
     <br> &emsp;&emsp; <input type="checkbox" name="q4ok" id="4b"> give a reason
     <br> &emsp;&emsp; <input type="checkbox" name="q4wrong"> suggest <p></p>
@@ -463,8 +463,8 @@
       }
 
       if (score < total) document.getElementById("result").innerHTML = "Your score is " + score + "/" + total;
-        else document.getElementById("result").innerHTML =
-          '<span style="color:green; ">Excellent! </span>Your score is ' + score + '/' + total;
+      else document.getElementById("result").innerHTML =
+        '<span style="color:green; ">Excellent! </span>Your score is ' + score + '/' + total;
     }
 
     function toggle(id) {
