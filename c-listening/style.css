@@ -61,3 +61,19 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+/* Audio Player Styles */
+.audio-player-container {
+    width: 100%;
+    margin: 16px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.audio-player {
+    width: 100%;
+    outline: none;
+}
