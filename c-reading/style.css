@@ -95,3 +95,112 @@ img {
     color: #6B7280;
     margin: 0;
 }
+
+/* Reading Review Accordion & Toggle Styles */
+.et_pb_accordion {
+    margin: 24px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    background-color: #fff;
+    border: 1px solid #e2e8f0;
+}
+
+.et_pb_toggle {
+    border-bottom: 1px solid #edf2f7;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.et_pb_toggle:last-child {
+    border-bottom: none;
+}
+
+.et_pb_toggle_title {
+    margin: 0;
+    padding: 18px 24px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #2d3748;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.et_pb_toggle_title:hover {
+    background-color: #f8fafc;
+    color: #3182ce;
+}
+
+.et_pb_toggle_title::after {
+    content: '→';
+    font-size: 18px;
+    color: #a0aec0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Open State */
+.et_pb_toggle_open {
+    background-color: #f0f9ff;
+}
+
+.et_pb_toggle_open .et_pb_toggle_title {
+    background-color: #f0f9ff;
+    color: #2b6cb0;
+    border-bottom: 1px solid #bee3f8;
+}
+
+.et_pb_toggle_open .et_pb_toggle_title::after {
+    content: '↓';
+    transform: rotate(0deg);
+    color: #3182ce;
+}
+
+/* Content Styles */
+.et_pb_toggle_content {
+    padding: 24px;
+    background-color: #fff;
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+.et_pb_toggle_close .et_pb_toggle_content {
+    display: none;
+}
+
+.et_pb_toggle_content p {
+    margin-bottom: 16px;
+}
+
+.et_pb_toggle_content p:last-child {
+    margin-bottom: 0;
+}
+
+.et_pb_toggle_content span[style*="font-size: large"] {
+    font-size: 17px !important;
+    display: block;
+}
+
+.et_pb_toggle_content strong {
+    color: #2d3748;
+    font-weight: 700;
+}
+
+.et_pb_toggle_content em {
+    color: #718096;
+    font-style: italic;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+    .et_pb_toggle_title {
+        padding: 16px 20px;
+        font-size: 16px;
+    }
+
+    .et_pb_toggle_content {
+        padding: 20px;
+    }
+}
