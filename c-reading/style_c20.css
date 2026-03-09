@@ -1,0 +1,161 @@
+/* style_c20.css - Modern Premium Styles for Cambridge 20 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap');
+
+:root {
+    --primary-color: #0f172a;
+    --accent-color: #4f46e5;
+    --primary-light: #f1f5f9;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --bg-main: #ffffff;
+    --bg-card: #f8fafc;
+    --border-color: #e2e8f0;
+    --success-color: #10b981;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-main);
+    margin: 0;
+    padding: 24px 20px 60px;
+    background-color: var(--bg-main);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Max width for readability */
+body>* {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Outfit', sans-serif;
+    color: var(--primary-color);
+    margin-top: 2em;
+    margin-bottom: 0.8em;
+    letter-spacing: -0.01em;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 18px;
+    background-color: var(--primary-light);
+    border-radius: 12px;
+    margin-top: 2.5em;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+/* Content Blocks */
+p {
+    margin-bottom: 20px;
+}
+
+strong {
+    font-weight: 600;
+    color: inherit;
+}
+
+/* Highlighted Answer/Explanation Blocks */
+p:has(strong) {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease;
+}
+
+p:has(strong):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Custom bullet styling */
+ul {
+    padding-left: 20px;
+    list-style: none;
+}
+
+li {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 24px;
+}
+
+li::before {
+    content: "•";
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+    body {
+        padding: 20px 16px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+        padding: 10px 14px;
+    }
+
+    p:has(strong) {
+        padding: 16px;
+        border-radius: 12px;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-main: #020617;
+        --bg-card: #0f172a;
+        --text-main: #f1f5f9;
+        --text-muted: #94a3b8;
+        --border-color: #1e293b;
+        --primary-light: #1e293b;
+        --primary-color: #f8fafc;
+    }
+
+    strong {
+        color: #fff;
+    }
+}
