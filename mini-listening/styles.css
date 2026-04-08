@@ -3,18 +3,22 @@ body {
     padding: 8px;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
-h2, h3 {
-       text-align: center !important;
-   }
-   h2 {
-       font-size: 20px !important;
-       margin: 16px 0 10px !important;
-   }
 
-   h3 {
-       font-size: 18px !important;
-       margin: 14px 0 8px !important;
-   }
+h2,
+h3 {
+    text-align: center !important;
+}
+
+h2 {
+    font-size: 20px !important;
+    margin: 16px 0 10px !important;
+}
+
+h3 {
+    font-size: 18px !important;
+    margin: 14px 0 8px !important;
+}
+
 img {
     max-width: 100% !important;
     height: auto !important;
@@ -27,9 +31,11 @@ img {
 .explainqe:before {
     content: "Example";
 }
+
 .explainq0:before {
     content: "Q0";
 }
+
 .explainq1:before {
     content: "Q1";
 }
@@ -45,36 +51,47 @@ img {
 .explainq4:before {
     content: "Q4";
 }
+
 .explainq5:before {
     content: "Q5";
 }
+
 .explainq6:before {
     content: "Q6";
 }
+
 .explainq7:before {
     content: "Q7";
 }
+
 .explainq8:before {
     content: "Q8";
 }
+
 .explainq9:before {
     content: "Q9";
 }
+
 .explainq10:before {
     content: "Q10";
 }
+
 .explainq11:before {
     content: "Q11";
 }
+
 .explainq12:before {
     content: "Q12";
 }
+
 .explainq13:before {
     content: "Q13";
 }
+
 .explainq14:before {
     content: "Q14";
 }
+
 .explainq15:before {
     content: "Q15";
 }
@@ -82,6 +99,7 @@ img {
 .explainq16:before {
     content: "Q16";
 }
+
 .explainq17:before {
     content: "Q17";
 }
@@ -93,6 +111,7 @@ img {
 .explainq19:before {
     content: "Q19";
 }
+
 .explainq20:before {
     content: "Q20";
 }
@@ -109,4 +128,20 @@ img {
     color: #222;
     border-bottom: solid 3px #e2b50f;
     padding-right: 5px;
+}
+
+/* Audio Player Styles */
+.audio-player-container {
+    width: 100%;
+    margin: 16px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.audio-player {
+    width: 100%;
+    outline: none;
 }
