@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>502 - Temporary Server Error</title>
+    <meta name="description" content="The server is temporarily unavailable. Please try again in a few minutes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="error-page">
+    <nav class="site-nav">
+        <div class="container nav-shell">
+            <a class="logo" href="index.html" aria-label="IELTS Practice Band 9 home">
+                <img src="app_images/app_icon.png" alt="IELTS Practice Band 9 app icon">
+                <span>IELTS Practice Band 9</span>
+            </a>
+        </div>
+    </nav>
+
+    <main class="error-main">
+        <div class="container error-wrap">
+            <section class="error-card">
+                <span class="error-code">Error 502</span>
+                <h1>The server needs a moment.</h1>
+                <p>The request reached the server, but it could not complete correctly right now. Please wait a few
+                    minutes and retry.</p>
+                <div class="error-actions">
+                    <a href="index.html" class="btn btn-primary">Go to Home</a>
+                    <a href="javascript:location.reload();" class="btn btn-secondary">Try Again</a>
+                </div>
+            </section>
+
+            <aside class="error-panel">
+                <a class="logo" href="index.html">
+                    <img src="app_images/app_icon.png" alt="IELTS Practice Band 9 logo">
+                    <span>IELTS Practice Band 9</span>
+                </a>
+                <strong>While the service recovers</strong>
+                <p>This is usually temporary. If the issue continues, come back later or reopen the site from the app
+                    store links on the landing page.</p>
+                <ul class="error-list">
+                    <li>Refresh the page after a short delay.</li>
+                    <li>Open the homepage and retry the previous action.</li>
+                    <li>Check again once the upstream service is available.</li>
+                </ul>
+            </aside>
+        </div>
+    </main>
+</body>
+
+</html>
