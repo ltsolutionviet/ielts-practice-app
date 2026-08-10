@@ -1,0 +1,374 @@
+/* ==========================================================================
+   IRA Summary Table - Mobile-First Responsive Premium Light Theme
+   With Expand / Collapse Mechanics
+   ========================================================================== */
+
+/* Global Container Rules */
+body {
+    margin: 0;
+    padding: 12px;
+    background-color: #f8fafc;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+/* Base Desktop / Tablet Table Layout (> 640px) */
+.ira-summary-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0 0 24px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #1e293b;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.ira-summary-table th,
+.ira-summary-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    text-align: left;
+    vertical-align: top;
+}
+
+.ira-summary-table th:last-child,
+.ira-summary-table td:last-child {
+    border-right: none;
+}
+
+.ira-summary-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.ira-summary-table thead tr {
+    background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.ira-summary-table thead th {
+    border-bottom: 2px solid #1d4ed8;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.ira-summary-table tbody tr {
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.ira-summary-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.ira-summary-table tbody tr:hover {
+    background-color: #f0f9ff;
+}
+
+/* Columns Customization */
+.ira-col-q {
+    width: 10%;
+    font-weight: 800;
+    white-space: nowrap;
+    text-align: center !important;
+}
+
+.ira-col-q strong {
+    display: inline-block;
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #bfdbfe;
+}
+
+.ira-toggle-icon {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 10px;
+    color: #64748b;
+    transition: transform 0.25s ease;
+}
+
+.ira-row-collapsed .ira-toggle-icon {
+    transform: rotate(-90deg);
+}
+
+.ira-row-expanded .ira-toggle-icon {
+    transform: rotate(0deg);
+}
+
+.ira-col-answer {
+    width: 16%;
+    color: #047857;
+    font-weight: 700;
+    word-break: break-word;
+}
+
+.ira-col-answer strong {
+    color: #065f46;
+    background-color: #ecfdf5;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #a7f3d0;
+    display: inline-block;
+}
+
+.ira-col-evidence {
+    width: 36%;
+    color: #334155;
+    font-style: italic;
+    background-color: #fffbeb;
+    border-left: 3px solid #f59e0b;
+}
+
+.ira-col-explanation {
+    width: 38%;
+    color: #334155;
+    background-color: #ffffff;
+}
+
+.ira-col-explanation br {
+    display: block;
+    content: "";
+    margin-top: 6px;
+}
+
+/* Desktop Collapse Handling */
+@media screen and (min-width: 641px) {
+    .ira-summary-table tbody tr.ira-row-collapsed td.ira-col-evidence,
+    .ira-summary-table tbody tr.ira-row-collapsed td.ira-col-explanation {
+        display: none !important;
+    }
+
+    .ira-summary-table tbody tr.ira-row-collapsed td.ira-col-q,
+    .ira-summary-table tbody tr.ira-row-collapsed td.ira-col-answer {
+        border-bottom: 1px solid #e2e8f0;
+    }
+}
+
+
+/* ==========================================================================
+   MOBILE OPTIMIZATION (Card View for Mobile WebViews ≤ 640px)
+   ========================================================================== */
+@media screen and (max-width: 640px) {
+    body {
+        padding: 8px;
+    }
+
+    .ira-toolbar {
+        margin-bottom: 10px;
+    }
+
+    .ira-btn {
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+
+    /* Hide standard header on mobile */
+    .ira-summary-table thead {
+        display: none;
+    }
+
+    .ira-summary-table,
+    .ira-summary-table tbody,
+    .ira-summary-table tr,
+    .ira-summary-table td {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .ira-summary-table {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        margin: 0 !important;
+    }
+
+    /* Transform each row into a mobile card */
+    .ira-summary-table tbody tr {
+        background-color: #ffffff !important;
+        border: 1.5px solid #cbd5e1 !important;
+        border-radius: 12px !important;
+        margin-bottom: 10px !important;
+        padding: 12px 14px !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .ira-summary-table tbody tr.ira-row-expanded {
+        border-color: #3b82f6 !important;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12) !important;
+    }
+
+    /* Clearfix for card header */
+    .ira-summary-table tbody tr::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* Question Number Badge on Mobile */
+    .ira-summary-table td.ira-col-q {
+        float: left !important;
+        width: auto !important;
+        padding: 0 !important;
+        border: none !important;
+        background: transparent !important;
+    }
+
+    .ira-summary-table td.ira-col-q strong {
+        font-size: 13px !important;
+        padding: 4px 10px !important;
+    }
+
+    /* Answer Badge on Mobile */
+    .ira-summary-table td.ira-col-answer {
+        float: right !important;
+        width: auto !important;
+        text-align: right !important;
+        padding: 0 !important;
+        border: none !important;
+        background: transparent !important;
+    }
+
+    .ira-summary-table td.ira-col-answer strong {
+        font-size: 13px !important;
+        padding: 4px 10px !important;
+    }
+
+    /* Mobile Collapsed State */
+    .ira-summary-table tbody tr.ira-row-collapsed td.ira-col-evidence,
+    .ira-summary-table tbody tr.ira-row-collapsed td.ira-col-explanation {
+        display: none !important;
+    }
+
+    /* Evidence Block Card Section (When Expanded) */
+    .ira-summary-table tbody tr.ira-row-expanded td.ira-col-evidence {
+        clear: both !important;
+        display: block !important;
+        width: 100% !important;
+        margin: 10px 0 10px 0 !important;
+        padding: 10px 12px !important;
+        background-color: #fffbeb !important;
+        border: 1px solid #fde68a !important;
+        border-left: 4px solid #f59e0b !important;
+        border-radius: 8px !important;
+        font-size: 13.5px !important;
+        line-height: 1.5 !important;
+        color: #451a03 !important;
+    }
+
+    .ira-summary-table td.ira-col-evidence::before {
+        content: "📌 Evidence:";
+        display: block;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 11.5px;
+        color: #b45309;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+        letter-spacing: 0.4px;
+    }
+
+    /* Explanation Block Card Section (When Expanded) */
+    .ira-summary-table tbody tr.ira-row-expanded td.ira-col-explanation {
+        clear: both !important;
+        display: block !important;
+        width: 100% !important;
+        margin-top: 4px !important;
+        padding: 10px 0 0 0 !important;
+        border: none !important;
+        border-top: 1px dashed #cbd5e1 !important;
+        font-size: 13.5px !important;
+        line-height: 1.55 !important;
+        color: #334155 !important;
+        background: transparent !important;
+    }
+
+    .ira-summary-table td.ira-col-explanation::before {
+        content: "💡 Explanation:";
+        display: block;
+        font-weight: 700;
+        font-size: 11.5px;
+        color: #2563eb;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+        letter-spacing: 0.4px;
+    }
+}
+
+/* Enforce Light Theme Always */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #f8fafc !important;
+        color: #1e293b !important;
+    }
+
+    .ira-summary-table {
+        background-color: #ffffff !important;
+        color: #1e293b !important;
+        border-color: #cbd5e1 !important;
+    }
+
+    .ira-summary-table th,
+    .ira-summary-table td {
+        border-color: #e2e8f0 !important;
+    }
+
+    .ira-summary-table thead tr {
+        background: linear-gradient(135deg, #0284c7 0%, #2563eb 100%) !important;
+        color: #ffffff !important;
+    }
+
+    .ira-summary-table tbody tr {
+        background-color: #ffffff !important;
+    }
+
+    .ira-summary-table tbody tr:nth-child(even) {
+        background-color: #f8fafc !important;
+    }
+
+    .ira-summary-table tbody tr:hover {
+        background-color: #f0f9ff !important;
+    }
+
+    .ira-col-q strong {
+        background-color: #eff6ff !important;
+        color: #1d4ed8 !important;
+        border-color: #bfdbfe !important;
+    }
+
+    .ira-col-answer strong {
+        color: #065f46 !important;
+        background-color: #ecfdf5 !important;
+        border-color: #a7f3d0 !important;
+    }
+
+    .ira-col-evidence {
+        color: #334155 !important;
+        background-color: #fffbeb !important;
+    }
+
+    .ira-col-explanation {
+        color: #334155 !important;
+        background-color: #ffffff !important;
+    }
+}
