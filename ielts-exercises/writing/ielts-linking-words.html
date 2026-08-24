@@ -6,207 +6,317 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="../style.css">
+    <style>
+        .linking-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 1.25rem 0;
+        }
+
+        @media screen and (min-width: 680px) {
+            .linking-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .linking-card {
+            background: #ffffff;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .linking-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #4338ca;
+            margin: 0 0 0.75rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e0e7ff;
+            display: flex;
+            align-items: center;
+        }
+
+        .linking-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .linking-tag {
+            background: #f1f5f9;
+            color: #334155;
+            border: 1px solid #cbd5e1;
+            padding: 0.35rem 0.65rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            line-height: 1.4;
+            display: inline-block;
+        }
+
+        .linking-tag:hover {
+            background: #ede9fe;
+            color: #5b21b6;
+            border-color: #c4b5fd;
+        }
+    </style>
 </head>
 
 <body>
-<div id="content">
+    <div id="content">
 
+        <h1>Linking structures</h1>
 
-    <h1> Linking structures </h1>
-    <p> Using a wide range of vocabulary will help you to gain higher score at IELTS. </p>
-    <p> Don't fear: you <em>don't have to learn all</em> of these phrases. Just choose a few that you like and practice
-        using them in your writing.</p>
+        <p>Using a wide range of vocabulary will help you to gain higher score at IELTS.</p>
+        <p>Don't fear: you <em>don't have to learn all</em> of these phrases. Just choose a few that you like and practice using them in your writing.</p>
 
+        <!-- 1. Adding, Ordering & Similarity -->
+        <p class="attention">1. Adding, Ordering &amp; Similarity</p>
+        <div class="linking-grid">
 
-    <table border="0" cellpadding="3" cellspacing="4" width="100%">
-        <tbody>
-            <tr>
-                <td width="33%" bgcolor="#C0C0C0"><strong>Listing</strong></td>
-                <td width="33%" bgcolor="#C0C0C0"><strong>Giving examples</strong></td>
-                <td width="34%" bgcolor="#C0C0C0"><strong>Generalising</strong></td>
-            </tr>
-            <tr>
-                <td width="33%">firstly, secondly, thirdly</td>
-                <td width="33%">for example</td>
-                <td width="34%">in general</td>
-            </tr>
-            <tr>
-                <td width="33%">first, furthermore, finally</td>
-                <td width="33%">for instance</td>
-                <td width="34%">generally</td>
-            </tr>
-            <tr>
-                <td width="33%">to begin, to conclude</td>
-                <td width="33%">as follows:</td>
-                <td width="34%">on the whole</td>
-            </tr>
-            <tr>
-                <td width="33%">next</td>
-                <td width="33%">that is</td>
-                <td width="34%">as a rule</td>
-            </tr>
-            <tr>
-                <td width="33%" bgcolor="#C0C0C0"><strong>Reinforcement</strong></td>
-                <td width="33%">in this case</td>
-                <td width="34%">for the most part</td>
-            </tr>
-            <tr>
-                <td width="33%">also</td>
-                <td width="33%">namely</td>
-                <td width="34%">in most cases</td>
-            </tr>
-            <tr>
-                <td width="33%">furthermore</td>
-                <td width="33%">in other words</td>
-                <td width="34%">usually</td>
-            </tr>
-            <tr>
-                <td width="33%">moreover</td>
-                <td width="33%" bgcolor="#C0C0C0"><strong>Result/consequence</strong></td>
-                <td width="34%" bgcolor="#C0C0C0"><strong>Highlighting</strong></td>
-            </tr>
-            <tr>
-                <td width="33%">what is more</td>
-                <td width="33%">so</td>
-                <td width="34%">in particular</td>
-            </tr>
-            <tr>
-                <td width="33%">in addition</td>
-                <td width="33%">therefore</td>
-                <td width="34%">particularly</td>
-            </tr>
-            <tr>
-                <td>besides</td>
-                <td>as a result/consequence</td>
-                <td>especially</td>
-            </tr>
-            <tr>
-                <td>above all</td>
-                <td>accordingly</td>
-                <td>mainly</td>
-            </tr>
-            <tr>
-                <td>as well (as)</td>
-                <td>consequently</td>
-                <td bgcolor="#C0C0C0"><strong>Reformulation</strong></td>
-            </tr>
-            <tr>
-                <td>in the same way</td>
-                <td>because of this/that</td>
-                <td>in other words</td>
-            </tr>
-            <tr>
-                <td>not only ... but also</td>
-                <td>thus</td>
-                <td>rather</td>
-            </tr>
-            <tr>
-                <td bgcolor="#C0C0C0"><strong>Similarity</strong></td>
-                <td>hence</td>
-                <td>to put it more simply</td>
-            </tr>
-            <tr>
-                <td>equally</td>
-                <td>for this/that reason</td>
-                <td bgcolor="#C0C0C0"><strong>Expressing an alternative</strong></td>
-            </tr>
-            <tr>
-                <td>likewise</td>
-                <td>so that</td>
-                <td>alternatively</td>
-            </tr>
-            <tr>
-                <td>similarly</td>
-                <td>in that case</td>
-                <td>rather</td>
-            </tr>
-            <tr>
-                <td>correspondingly</td>
-                <td>under these circumstances</td>
-                <td>on the other hand</td>
-            </tr>
-            <tr>
-                <td>in the same way</td>
-                <td bgcolor="#C0C0C0"><strong>Deduction</strong></td>
-                <td>the alternative is</td>
-            </tr>
-            <tr>
-                <td bgcolor="#C0C0C0"><strong>Transition to new point</strong></td>
-                <td>then</td>
-                <td>another possibility would be</td>
-            </tr>
-            <tr>
-                <td>now,</td>
-                <td>in other words</td>
-                <td bgcolor="#C0C0C0"><strong>Contrast</strong></td>
-            </tr>
-            <tr>
-                <td>as far as&nbsp;<em>x</em>&nbsp;is concerned</td>
-                <td>in that case</td>
-                <td>instead</td>
-            </tr>
-            <tr>
-                <td>with regard/reference to</td>
-                <td>otherwise</td>
-                <td>conversely</td>
-            </tr>
-            <tr>
-                <td>as for ...</td>
-                <td>this implies that ...</td>
-                <td>on the contrary</td>
-            </tr>
-            <tr>
-                <td>it follows that</td>
-                <td>if so/not</td>
-                <td>in contrast</td>
-            </tr>
-            <tr>
-                <td>turning to</td>
-                <td bgcolor="#C0C0C0"><strong>Stating the obvious</strong></td>
-                <td>in comparison</td>
-            </tr>
-            <tr>
-                <td bgcolor="#C0C0C0"><strong>Summary</strong></td>
-                <td>obviously</td>
-                <td bgcolor="#C0C0C0"><strong>Concession (smth unexpected)</strong></td>
-            </tr>
-            <tr>
-                <td>in conclusion</td>
-                <td>clearly</td>
-                <td>even though</td>
-            </tr>
-            <tr>
-                <td>to conclude</td>
-                <td>naturally</td>
-                <td>however</td>
-            </tr>
-            <tr>
-                <td>in brief</td>
-                <td>of course</td>
-                <td>however much</td>
-            </tr>
-            <tr>
-                <td>to summarise</td>
-                <td>as can be expected</td>
-                <td>nevertheless</td>
-            </tr>
-            <tr>
-                <td>overall</td>
-                <td>surely</td>
-                <td>still</td>
-            </tr>
-            <tr>
-                <td>therefore</td>
-                <td>after all</td>
-                <td>yet</td>
-            </tr>
-        </tbody>
-    </table>
-    <p>&nbsp;</p>
+            <!-- Listing -->
+            <div class="linking-card">
+                <h3>Listing &amp; Order</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">firstly, secondly, thirdly</span>
+                    <span class="linking-tag">first, furthermore, finally</span>
+                    <span class="linking-tag">to begin, to conclude</span>
+                    <span class="linking-tag">next</span>
+                </div>
+            </div>
 
+            <!-- Reinforcement -->
+            <div class="linking-card">
+                <h3>Reinforcement (Adding info)</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">also</span>
+                    <span class="linking-tag">furthermore</span>
+                    <span class="linking-tag">moreover</span>
+                    <span class="linking-tag">what is more</span>
+                    <span class="linking-tag">in addition</span>
+                    <span class="linking-tag">besides</span>
+                    <span class="linking-tag">above all</span>
+                    <span class="linking-tag">as well (as)</span>
+                    <span class="linking-tag">in the same way</span>
+                    <span class="linking-tag">not only ... but also</span>
+                </div>
+            </div>
 
+            <!-- Similarity -->
+            <div class="linking-card">
+                <h3>Similarity</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">equally</span>
+                    <span class="linking-tag">likewise</span>
+                    <span class="linking-tag">similarly</span>
+                    <span class="linking-tag">correspondingly</span>
+                    <span class="linking-tag">in the same way</span>
+                </div>
+            </div>
 
-</div>
+        </div>
+
+        <hr>
+
+        <!-- 2. Examples & Clarification -->
+        <p class="attention">2. Examples &amp; Clarification</p>
+        <div class="linking-grid">
+
+            <!-- Giving examples -->
+            <div class="linking-card">
+                <h3>Giving examples</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">for example</span>
+                    <span class="linking-tag">for instance</span>
+                    <span class="linking-tag">as follows:</span>
+                    <span class="linking-tag">that is</span>
+                    <span class="linking-tag">in this case</span>
+                    <span class="linking-tag">namely</span>
+                    <span class="linking-tag">in other words</span>
+                </div>
+            </div>
+
+            <!-- Highlighting -->
+            <div class="linking-card">
+                <h3>Highlighting</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">in particular</span>
+                    <span class="linking-tag">particularly</span>
+                    <span class="linking-tag">especially</span>
+                    <span class="linking-tag">mainly</span>
+                </div>
+            </div>
+
+            <!-- Reformulation -->
+            <div class="linking-card">
+                <h3>Reformulation</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">in other words</span>
+                    <span class="linking-tag">rather</span>
+                    <span class="linking-tag">to put it more simply</span>
+                </div>
+            </div>
+
+            <!-- Generalising -->
+            <div class="linking-card">
+                <h3>Generalising</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">in general</span>
+                    <span class="linking-tag">generally</span>
+                    <span class="linking-tag">on the whole</span>
+                    <span class="linking-tag">as a rule</span>
+                    <span class="linking-tag">for the most part</span>
+                    <span class="linking-tag">in most cases</span>
+                    <span class="linking-tag">usually</span>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- 3. Causes, Results & Deduction -->
+        <p class="attention">3. Causes, Results &amp; Deduction</p>
+        <div class="linking-grid">
+
+            <!-- Result/consequence -->
+            <div class="linking-card">
+                <h3>Result / Consequence</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">so</span>
+                    <span class="linking-tag">therefore</span>
+                    <span class="linking-tag">as a result/consequence</span>
+                    <span class="linking-tag">accordingly</span>
+                    <span class="linking-tag">consequently</span>
+                    <span class="linking-tag">because of this/that</span>
+                    <span class="linking-tag">thus</span>
+                    <span class="linking-tag">hence</span>
+                    <span class="linking-tag">for this/that reason</span>
+                    <span class="linking-tag">so that</span>
+                    <span class="linking-tag">in that case</span>
+                    <span class="linking-tag">under these circumstances</span>
+                </div>
+            </div>
+
+            <!-- Deduction -->
+            <div class="linking-card">
+                <h3>Deduction</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">then</span>
+                    <span class="linking-tag">in other words</span>
+                    <span class="linking-tag">in that case</span>
+                    <span class="linking-tag">otherwise</span>
+                    <span class="linking-tag">this implies that ...</span>
+                    <span class="linking-tag">if so/not</span>
+                </div>
+            </div>
+
+            <!-- Stating the obvious -->
+            <div class="linking-card">
+                <h3>Stating the obvious</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">obviously</span>
+                    <span class="linking-tag">clearly</span>
+                    <span class="linking-tag">naturally</span>
+                    <span class="linking-tag">of course</span>
+                    <span class="linking-tag">as can be expected</span>
+                    <span class="linking-tag">surely</span>
+                    <span class="linking-tag">after all</span>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- 4. Contrast & Concession -->
+        <p class="attention">4. Contrast, Concession &amp; Alternatives</p>
+        <div class="linking-grid">
+
+            <!-- Contrast -->
+            <div class="linking-card">
+                <h3>Contrast</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">instead</span>
+                    <span class="linking-tag">conversely</span>
+                    <span class="linking-tag">on the contrary</span>
+                    <span class="linking-tag">in contrast</span>
+                    <span class="linking-tag">in comparison</span>
+                </div>
+            </div>
+
+            <!-- Concession -->
+            <div class="linking-card">
+                <h3>Concession (Unexpected)</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">even though</span>
+                    <span class="linking-tag">however</span>
+                    <span class="linking-tag">however much</span>
+                    <span class="linking-tag">nevertheless</span>
+                    <span class="linking-tag">still</span>
+                    <span class="linking-tag">yet</span>
+                </div>
+            </div>
+
+            <!-- Expressing an alternative -->
+            <div class="linking-card">
+                <h3>Expressing an alternative</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">alternatively</span>
+                    <span class="linking-tag">rather</span>
+                    <span class="linking-tag">on the other hand</span>
+                    <span class="linking-tag">the alternative is</span>
+                    <span class="linking-tag">another possibility would be</span>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- 5. Transitions & Summary -->
+        <p class="attention">5. Transitions &amp; Summary</p>
+        <div class="linking-grid">
+
+            <!-- Transition to new point -->
+            <div class="linking-card">
+                <h3>Transition to new point</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">now,</span>
+                    <span class="linking-tag">as far as <em>x</em> is concerned</span>
+                    <span class="linking-tag">with regard/reference to</span>
+                    <span class="linking-tag">as for ...</span>
+                    <span class="linking-tag">it follows that</span>
+                    <span class="linking-tag">turning to</span>
+                </div>
+            </div>
+
+            <!-- Summary -->
+            <div class="linking-card">
+                <h3>Summary / Conclusion</h3>
+                <div class="linking-tags">
+                    <span class="linking-tag">in conclusion</span>
+                    <span class="linking-tag">to conclude</span>
+                    <span class="linking-tag">in brief</span>
+                    <span class="linking-tag">to summarise</span>
+                    <span class="linking-tag">overall</span>
+                    <span class="linking-tag">therefore</span>
+                </div>
+            </div>
+
+        </div>
+
+        <p>&nbsp;</p>
+
+    </div>
 </body>
 
 </html>
