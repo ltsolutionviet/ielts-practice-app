@@ -1086,12 +1086,15 @@ span.example {
 
 /* ==================== WORD TABLE & VOCABULARY ==================== */
 .word-table {
+    display: block;
     width: 100%;
+    max-width: 100%;
     margin: 1.5rem 0;
     border-collapse: separate;
     border-spacing: 0;
     border-radius: 12px;
-    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     border: 1px solid #e2e8f0;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
 }
@@ -1103,18 +1106,22 @@ span.example {
     background: #ffffff;
     font-size: 0.95rem;
     line-height: 1.8;
+    min-width: 120px;
 }
 
-.word-table tr:first-child td {
+.word-table tr:first-child td,
+.word-table tr:nth-child(3) td {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     font-weight: 700;
     text-align: center;
     border: none;
     padding: 0.85rem 0.5rem;
+    white-space: nowrap;
 }
 
-.word-table tr:first-child td p strong {
+.word-table tr:first-child td p strong,
+.word-table tr:nth-child(3) td p strong {
     color: white;
 }
 
