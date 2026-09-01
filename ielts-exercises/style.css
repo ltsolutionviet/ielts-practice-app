@@ -524,7 +524,7 @@ span[id^="s"] img {
 img[src*="plus.png"],
 img[src*="minus.png"],
 img[src*="show.png"],
-img[src*="show.png"],
+img[src*="hide.png"],
 img[src*="question.png"] {
     width: 20px !important;
     height: 20px !important;
