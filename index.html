@@ -4,332 +4,644 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IELTS Practice Band 9 - Study Smarter for Your IELTS Target</title>
+    <title>IELTS Practice Band 9 - Daily Practice & AI Feedback</title>
     <meta name="description"
         content="Prepare for IELTS with focused practice for Listening, Reading, Writing, Speaking, and AI instant feedback for essays and spoken answers.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="IELTS Practice Band 9 - Daily Practice & AI Feedback">
+    <meta property="og:description"
+        content="Prepare for IELTS with focused practice for Listening, Reading, Writing, Speaking, and AI instant feedback for essays and spoken answers.">
+    <meta property="og:image" content="app_images/app_icon.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="IELTS Practice Band 9 - Daily Practice & AI Feedback">
+    <meta property="twitter:description"
+        content="Prepare for IELTS with focused practice for Listening, Reading, Writing, Speaking, and AI instant feedback for essays and spoken answers.">
+    <meta property="twitter:image" content="app_images/app_icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css?v=19">
 </head>
 
 <body>
-    <nav class="site-nav">
+
+    <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+    <nav class="site-nav" id="site-nav">
         <div class="container nav-shell">
             <a class="logo" href="index.html" aria-label="IELTS Practice Band 9 home">
                 <img src="app_images/app_icon.png" alt="IELTS Practice Band 9 app icon">
                 <span>IELTS Practice Band 9</span>
             </a>
-            <ul class="nav-links">
+            <button class="nav-burger" id="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#ai-feedback">AI Feedback</a></li>
-                <li><a href="#study-plan">Study Plan</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="#download">Download</a></li>
             </ul>
             <a href="#download" class="btn btn-primary nav-cta">Get the App</a>
         </div>
     </nav>
 
+    <!-- ═══════════════════════════════ HERO ══════════════════════════════ -->
+    <!-- ═══════════════════════════════ HERO ══════════════════════════════ -->
     <header class="hero">
-        <div class="hero-orb hero-orb-left"></div>
-        <div class="hero-orb hero-orb-right"></div>
-        <div class="container hero-grid">
-            <div class="hero-copy">
-                <p class="eyebrow">Mobile IELTS prep for focused daily practice</p>
-                <h1>Level up your IELTS prep with daily practice and instant AI feedback.</h1>
-                <p class="hero-text">Practice all 4 skills, review sample answers, and get AI instant feedback on
-                    Writing essays and Speaking answers inside one app built for exam preparation.</p>
-                <div class="hero-actions" id="download">
-                    <a href="https://play.google.com/store/apps/details?id=com.lt.ieltspracticetest"
-                        class="btn btn-primary" target="_blank" rel="noreferrer">Download on Google Play</a>
-                    <a href="https://apps.apple.com/vn/app/ielts-practice-band-9/id1487374890"
-                        class="btn btn-secondary" target="_blank" rel="noreferrer">Download on the App Store</a>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="hero-glow hero-glow-3"></div>
+
+        <div class="container hero-grid" id="download">
+            <div class="hero-copy reveal">
+                <div class="hero-eyebrow">
+                    <span class="eyebrow-dot"></span>
+                    <span>IELTS Prep · 5M+ Learners</span>
                 </div>
-                <div class="hero-metrics">
-                    <div class="metric-card metric-card-primary">
-                        <small class="metric-label">Global Reach</small>
-                        <strong>4M+</strong>
+                <h1>Reach <span class="gradient-text">IELTS Band 9</span> with AI-powered daily practice.
+                </h1>
+                <p class="hero-sub">Practice all 4 skills, learn from expert answers, and get instant AI feedback on
+                    your Speaking and Writing.</p>
+
+                <div class="hero-actions">
+                    <a href="https://play.google.com/store/apps/details?id=com.lt.ieltspracticetest&amp;referrer=utm_source%3Dieltspracticeonline%26utm_medium%3Dlanding_page%26utm_campaign%3Dhero_download"
+                        class="btn btn-hero-primary" target="_blank" rel="noreferrer">
+                        <span class="material-symbols-outlined" aria-hidden="true">android</span>
+                        Google Play
+                    </a>
+                    <a href="https://apps.apple.com/app/ielts-practice-band-9/id1487374890?utm_source=ieltspracticeonline&amp;utm_medium=landing_page&amp;utm_campaign=hero_download&amp;ct=hero_download"
+                        class="btn btn-hero-secondary" target="_blank" rel="noreferrer">
+                        <span class="material-symbols-outlined" aria-hidden="true">apple</span>
+                        App Store
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>5M<span>+</span></strong>
                         <span>Downloads</span>
-                        <p>Chosen by learners building consistent IELTS study habits.</p>
                     </div>
-                    <div class="metric-card metric-card-accent">
-                        <small class="metric-label">Trusted Users</small>
-                        <strong>50K</strong>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <strong>38K<span>+</span></strong>
                         <span>Reviews</span>
-                        <p>Strong user feedback across mobile app store audiences.</p>
                     </div>
-                    <div class="metric-card metric-card-soft">
-                        <small class="metric-label">Exam Coverage</small>
-                        <strong>4 Skills</strong>
-                        <span>Structured practice</span>
-                        <p>Listening, Reading, Writing, and Speaking in one study flow.</p>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <strong>4.8<span>★</span></strong>
+                        <span>Store Rating</span>
                     </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="hero-visual-stack">
-                    <div class="phone-frame phone-frame-secondary">
-                        <img src="app_images/listening.png" alt="IELTS Practice Band 9 listening practice preview">
+
+            <div class="hero-visual reveal reveal-delay-2">
+                <div class="hero-phones">
+                    <div class="phone-glow-ring"></div>
+                    <div class="phone-mockup phone-back">
+                        <img src="app_images/listening_retina.png" alt="IELTS listening practice test screen">
                     </div>
-                    <div class="phone-frame phone-frame-primary">
-                        <img src="app_images/speaking.png" alt="IELTS Practice Band 9 speaking practice preview">
+                    <div class="phone-mockup phone-front">
+                        <img src="app_images/speaking_retina.png" alt="IELTS speaking practice with AI examiner screen">
                     </div>
-                </div>
-                <div class="floating-note note-listening">
-                    <strong>Listening</strong>
-                    <span>Audio practice with transcripts</span>
-                </div>
-                <div class="floating-note note-reading">
-                    <strong>Reading</strong>
-                    <span>Academic and General passages</span>
-                </div>
-                <div class="floating-note note-writing">
-                    <strong>AI Writing</strong>
-                    <span>Essay corrections with band descriptors</span>
-                </div>
-                <div class="floating-note note-speaking">
-                    <strong>AI Speaking</strong>
-                    <span>Answer evaluation in seconds</span>
+
+                    <!-- 4 Core Skills Mascots Floating Pills -->
+                    <div class="hero-pill pill-listening float-1">
+                        <img src="app_images/mascot_listening.png" alt="Listening Practice Test Mascot">
+                        <div><strong>Listening</strong><span>Practice Tests</span></div>
+                    </div>
+                    <div class="hero-pill pill-reading float-2">
+                        <img src="app_images/mascot_reading.png" alt="Reading Practice Test Mascot">
+                        <div><strong>Reading</strong><span>Practice Tests</span></div>
+                    </div>
+                    <div class="hero-pill pill-writing float-3">
+                        <img src="app_images/mascot_writing.png" alt="Writing AI Feedback Mascot">
+                        <div><strong>Writing <span class="pill-badge">AI</span></strong><span>AI Essay Scoring</span>
+                        </div>
+                    </div>
+                    <div class="hero-pill pill-speaking pill-featured float-4">
+                        <img src="app_images/mascot_speaking.png" alt="Speaking AI Examiner Mascot">
+                        <div><strong>Speaking <span class="pill-badge">AI</span></strong><span>Instant Evaluation</span>
+                        </div>
+                    </div>
+
+                    <!-- Floating Mascot Band 9 Companion -->
+                    <div class="hero-mascot-badge float-slow" title="Target Band 9.0!">
+                        <img src="app_images/mascot_band9.png" alt="IELTS Band 9 Mascot">
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="section trust-strip" aria-label="Value highlights">
-            <div class="container trust-grid">
+
+        <!-- ══════════════════════ TRUST STRIP ════════════════════════════ -->
+        <section class="trust-strip" aria-label="Trust indicators">
+            <div class="container trust-inner">
                 <div class="trust-item">
-                    <span class="trust-label">Practice</span>
-                    <p>Train listening, reading, writing, and speaking without switching between different tools.</p>
+                    <span class="material-symbols-outlined" aria-hidden="true">star</span>
+                    <span>4.8 Rating on App Store</span>
                 </div>
+                <div class="trust-sep"></div>
                 <div class="trust-item">
-                    <span class="trust-label">AI Feedback</span>
-                    <p>Get Writing and Speaking answers evaluated quickly with band descriptors and correction notes.
-                    </p>
+                    <span class="material-symbols-outlined" aria-hidden="true">verified</span>
+                    <span>Trusted by 5M+ IELTS learners</span>
                 </div>
+                <div class="trust-sep"></div>
                 <div class="trust-item">
-                    <span class="trust-label">Consistency</span>
-                    <p>Keep a daily rhythm with mobile-friendly lessons you can finish on breaks, commutes, or evenings.
-                    </p>
+                    <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
+                    <span>AI feedback in seconds</span>
+                </div>
+                <div class="trust-sep"></div>
+                <div class="trust-item">
+                    <span class="material-symbols-outlined" aria-hidden="true">devices</span>
+                    <span>iOS & Android</span>
                 </div>
             </div>
         </section>
 
-        <section id="ai-feedback" class="section ai-feedback-section">
-            <div class="container ai-feedback-grid">
-                <div class="ai-feedback-copy">
-                    <p class="eyebrow">AI Instant Feedback</p>
-                    <h2>Writing and Speaking feedback in seconds, not after your next tutoring session.</h2>
-                    <p>Submit IELTS Writing essays or Speaking answers and receive detailed band descriptor feedback,
-                        corrections, and practical improvement notes while the task is still fresh.</p>
-                    <div class="ai-feedback-points" aria-label="AI feedback highlights">
-                        <div>
-                            <span class="material-symbols-outlined" aria-hidden="true">speed</span>
-                            <strong>Fast evaluation</strong>
-                            <p>Review your response immediately after practice.</p>
-                        </div>
-                        <div>
-                            <span class="material-symbols-outlined" aria-hidden="true">fact_check</span>
-                            <strong>Band descriptors</strong>
-                            <p>Understand score signals for IELTS criteria.</p>
-                        </div>
-                        <div>
-                            <span class="material-symbols-outlined" aria-hidden="true">edit_note</span>
-                            <strong>Actionable corrections</strong>
-                            <p>See what to fix before repeating the task.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="ai-feedback-visual" aria-label="AI feedback app screenshots">
-                    <div class="ai-phone ai-phone-left">
-                        <img src="app_images/ai-feedback.png" alt="AI feedback screen for IELTS Writing">
-                    </div>
-                    <div class="ai-phone ai-phone-right">
-                        <img src="app_images/ai-feedback-2.png" alt="AI feedback screen for IELTS Speaking">
-                    </div>
-                    <div class="ai-feedback-badge">
-                        <span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>
-                        <strong>Writing &amp; Speaking</strong>
-                        <small>Detailed feedback in one workflow</small>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="features" class="section feature-section">
+        <!-- ══════════════════════ AI FEEDBACK ════════════════════════════ -->
+        <section id="ai-feedback" class="section ai-section">
             <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">Everything you need in one app</p>
-                    <h2>Study each skill with material that looks closer to the real exam.</h2>
-                    <p>From audio practice to sample essays, speaking prompts, and AI feedback, the app helps you stay
-                        inside a single preparation workflow.</p>
+                <div class="section-label reveal">
+                    <span class="eyebrow-dot"></span>
+                    <span>AI Speaking &amp; Writing Evaluation</span>
                 </div>
-                <div class="features-rail-head">
-                    <span class="features-rail-hint">Swipe to explore</span>
+                <h2 class="section-title reveal">AI Speaking &amp; Writing<br>evaluation <em>in seconds.</em></h2>
+                <p class="section-sub reveal">Speak naturally or submit your essays. The AI Examiner instantly analyzes
+                    your <strong>Pronunciation, Fluency &amp; Coherence, Lexical Resource, and Grammatical
+                        Accuracy</strong> against official IELTS band descriptors.</p>
+
+                <div class="ai-layout">
+                    <div class="ai-phones-wrap reveal reveal-delay-2">
+                        <div class="phone-glow-ring"></div>
+                        <div class="ai-phone-card ai-phone-left">
+                            <img src="app_images/ai-feedback-2_retina.png" alt="AI Speaking evaluation detail screen">
+                        </div>
+                        <div class="ai-phone-card ai-phone-right">
+                            <img src="app_images/ai-feedback_retina.png"
+                                alt="AI Evaluation Engine in-progress scan screen">
+                        </div>
+
+                        <!-- Floating badge: AI Speaking Coach -->
+                        <div class="ai-badge badge-workflow">
+                            <img src="app_images/mascot_speaking.png" alt="AI Speaking Mascot Coach">
+                            <div>
+                                <strong>AI Speaking Coach</strong>
+                                <small>Live Fluency &amp; Pronunciation</small>
+                            </div>
+                        </div>
+
+                        <!-- Floating badge: AI Evaluation Band 8.5 Result -->
+                        <div class="ai-badge badge-score float-slow">
+                            <img src="app_images/mascot_yay.png" alt="Band 8.5 Expert celebration mascot">
+                            <div>
+                                <strong>Band 8.5 Expert</strong>
+                                <small>Native-like fluency &amp; accuracy</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ai-points reveal reveal-delay-1">
+                        <div class="ai-point-card point-featured">
+                            <div class="ai-point-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">mic</span>
+                            </div>
+                            <div>
+                                <div class="point-badge-row">
+                                    <h3>AI Speaking Examiner</h3>
+                                    <span class="point-chip">Core Focus</span>
+                                </div>
+                                <p>Record your voice for Part 1 questions, Part 2 Cue Cards, or Part 3 discussions. AI
+                                    pinpoints pronunciation slips, speech pauses, and fluency rhythm instantly.</p>
+                            </div>
+                        </div>
+                        <div class="ai-point-card">
+                            <div class="ai-point-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">edit_note</span>
+                            </div>
+                            <div>
+                                <h3>Writing Task 1 &amp; 2 Scoring</h3>
+                                <p>Receive detailed Task Achievement, Coherence &amp; Cohesion assessments, plus
+                                    line-by-line grammar rewrites and vocabulary upgrades.</p>
+                            </div>
+                        </div>
+                        <div class="ai-point-card">
+                            <div class="ai-point-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">fact_check</span>
+                            </div>
+                            <div>
+                                <h3>Official 4-Criteria Breakdown</h3>
+                                <p>Each evaluation maps directly to Fluency &amp; Coherence, Lexical Resource,
+                                    Grammatical Range &amp; Accuracy, and Pronunciation.</p>
+                            </div>
+                        </div>
+                        <div class="ai-point-card">
+                            <div class="ai-point-icon">
+                                <span class="material-symbols-outlined" aria-hidden="true">trending_up</span>
+                            </div>
+                            <div>
+                                <h3>Targeted Feedback &amp; Next Steps</h3>
+                                <p>See exactly what to fix before your next trial — turning common mistakes into
+                                    confident Band 8.0+ responses.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="features-grid">
-                    <article class="feature-card feature-card-highlight feature-card-ai">
-                        <div class="feature-media">
-                            <div class="feature-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span>
-                            </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════ FEATURES BENTO ═════════════════════════ -->
+        <section id="features" class="section features-section">
+            <div class="container">
+                <div class="section-label reveal">
+                    <span class="eyebrow-dot"></span>
+                    <span>Everything You Need</span>
+                </div>
+                <h2 class="section-title reveal">AI Speaking Coach.<br>Authentic Practice Tests.</h2>
+                <p class="section-sub reveal">Master IELTS Speaking with real-time AI feedback, polish your Writing
+                    essays, and tackle authentic Listening and Reading practice test packs.</p>
+
+                <div class="bento-grid reveal">
+                    <!-- Large card: AI Evaluation Engine (Speaking & Writing) -->
+                    <article class="bento-card bento-large bento-dark bento-card-engine">
+                        <div class="bento-body">
+                            <span class="bento-tag">✦ Core AI Technology</span>
+                            <h3>AI Speaking &amp; Writing Evaluation</h3>
+                            <p>Instant, examiner-grade evaluation for your spoken responses and essays. Scored across
+                                Fluency, Pronunciation, Grammar, and Lexical Resource with examiner-level precision.</p>
                         </div>
-                        <div class="feature-body">
-                            <span class="feature-meta">New AI Feature</span>
-                            <h3>AI instant feedback</h3>
-                            <p>Get IELTS Writing essays and Speaking answers evaluated with detailed band descriptors
-                                and corrections.</p>
-                        </div>
-                    </article>
-                    <article class="feature-card feature-card-highlight feature-card-green">
-                        <div class="feature-media">
-                            <div class="feature-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">headphones</span>
-                            </div>
-                        </div>
-                        <div class="feature-body">
-                            <span class="feature-meta">Core Skill</span>
-                            <h3>Listening practice</h3>
-                            <p>Work through exam-style audio with transcripts to sharpen detail recognition and speed.</p>
-                        </div>
-                    </article>
-                    <article class="feature-card feature-card-blue">
-                        <div class="feature-media">
-                            <div class="feature-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">menu_book</span>
-                            </div>
-                        </div>
-                        <div class="feature-body">
-                            <span class="feature-meta">Core Skill</span>
-                            <h3>Reading mastery</h3>
-                            <p>Train comprehension with Academic and General passages built around IELTS-style question
-                                patterns.</p>
+                        <div class="bento-illus bento-illus-engine">
+                            <img src="app_images/ai_valuation_flow.png" alt="AI Evaluation Engine in-app scan"
+                                class="bento-engine-img">
                         </div>
                     </article>
-                    <article class="feature-card feature-card-orange">
-                        <div class="feature-media">
-                            <div class="feature-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">edit_square</span>
-                            </div>
+
+                    <!-- Medium card: Speaking Mastery (Featured!) -->
+                    <article class="bento-card bento-medium bento-rose">
+                        <div class="bento-illus">
+                            <img src="app_images/mascot_speaking.png" alt="Speaking AI Examiner Mascot">
                         </div>
-                        <div class="feature-body">
-                            <span class="feature-meta">Core Skill</span>
-                            <h3>Writing Task 1 and 2</h3>
-                            <p>Review sample essays, structures, and strategies that make writing practice more deliberate.
+                        <div class="bento-body">
+                            <span class="bento-tag bento-tag-featured">✦ Speaking · AI Examiner</span>
+                            <h3>Speaking with AI Examiner</h3>
+                            <p>Practice Part 1 questions, Part 2 cue cards, and Part 3 discussions. Get instant
+                                speech-to-text analysis, pronunciation scoring, and natural fluency pacing tips.</p>
+                        </div>
+                    </article>
+
+                    <!-- Medium card: My IELTS Journey & Band Predictor -->
+                    <article class="bento-card bento-medium bento-blue bento-card-journey">
+                        <div class="bento-body">
+                            <span class="bento-tag">Track &amp; Predict</span>
+                            <h3>My IELTS Journey</h3>
+                            <p>Track test completions across all 4 skills, monitor your progress from Band 6.0 to 8.5+,
+                                and view predicted overall band scores in real time.</p>
+                        </div>
+                        <div class="bento-illus bento-illus-journey">
+                            <img src="app_images/summary_overall.png" alt="My IELTS Journey summary card"
+                                class="bento-journey-img">
+                        </div>
+                    </article>
+
+                    <!-- Small card: Writing Practice -->
+                    <article class="bento-card bento-small bento-orange">
+                        <div class="bento-illus">
+                            <img src="app_images/mascot_writing.png" alt="Writing AI Feedback Mascot">
+                        </div>
+                        <div class="bento-body">
+                            <span class="bento-tag">AI Scoring</span>
+                            <h3>Writing Practice</h3>
+                            <p>Sample essays, Task 1 &amp; Task 2 prompts, and instant AI evaluation with structure
+                                fixes.</p>
+                        </div>
+                    </article>
+
+                    <!-- Small card: Listening Practice Tests -->
+                    <article class="bento-card bento-small bento-green">
+                        <div class="bento-illus">
+                            <img src="app_images/mascot_listening.png" alt="Listening Practice Test Mascot">
+                        </div>
+                        <div class="bento-body">
+                            <span class="bento-tag">Practice Tests</span>
+                            <h3>Listening Tests</h3>
+                            <p>Exam-standard practice test packs with native audio, question sets, and full transcripts.
                             </p>
                         </div>
                     </article>
-                    <article class="feature-card feature-card-rose">
-                        <div class="feature-media">
-                            <div class="feature-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">record_voice_over</span>
-                            </div>
+
+                    <!-- Small card: Reading Practice Tests -->
+                    <article class="bento-card bento-small bento-sand">
+                        <div class="bento-illus">
+                            <img src="app_images/mascot_reading.png" alt="Reading Practice Test Mascot">
                         </div>
-                        <div class="feature-body">
-                            <span class="feature-meta">Core Skill</span>
-                            <h3>Speaking confidence</h3>
-                            <p>Use cue cards, common topics, and rehearsal prompts to prepare stronger spoken responses.</p>
-                        </div>
-                    </article>
-                    <article class="feature-card feature-card-sand">
-                        <div class="feature-media">
-                            <div class="feature-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">tips_and_updates</span>
-                            </div>
-                        </div>
-                        <div class="feature-body">
-                            <span class="feature-meta">Support</span>
-                            <h3>Daily updates</h3>
-                            <p>Stay close to fresh tips, study content, and reminders that help maintain exam momentum.</p>
+                        <div class="bento-body">
+                            <span class="bento-tag">Practice Tests</span>
+                            <h3>Reading Tests</h3>
+                            <p>Authentic Academic and General reading passages built around official test formats.</p>
                         </div>
                     </article>
-                    <article class="feature-card feature-card-slate">
-                        <div class="feature-media">
-                            <div class="feature-icon">
-                                <span class="material-symbols-outlined" aria-hidden="true">folder_managed</span>
-                            </div>
+
+                    <!-- Small card: Target Band 9 Achievement -->
+                    <article class="bento-card bento-small bento-slate">
+                        <div class="bento-illus">
+                            <img src="app_images/mascot_master.png" alt="Target Band 9 Master Mascot">
                         </div>
-                        <div class="feature-body">
-                            <span class="feature-meta">Library</span>
-                            <h3>Resource library</h3>
-                            <p>Open lessons, examples, and support materials quickly when you need a fast revision pass.</p>
+                        <div class="bento-body">
+                            <span class="bento-tag">Achievement</span>
+                            <h3>Target Band 9</h3>
+                            <p>Comprehensive lessons, high-scoring collocations, and daily study reminders to keep
+                                momentum.</p>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="study-plan" class="section pathway-section">
-            <div class="container pathway-grid">
-                <div class="pathway-copy">
-                    <p class="eyebrow">Simple weekly rhythm</p>
-                    <h2>Turn scattered study into a repeatable IELTS routine.</h2>
-                    <p>Use the app to rotate skills, revisit weak areas, and keep revision compact enough to sustain
-                        over weeks, not just a few days.</p>
+        <!-- ══════════════════════ APP SCREENSHOTS SHOWCASE ════════════════ -->
+        <section class="section screenshots-section" id="screenshots">
+            <div class="container">
+                <div class="section-label reveal">
+                    <span class="eyebrow-dot"></span>
+                    <span>Inside IELTS Practice Band 9</span>
                 </div>
-                <div class="pathway-steps">
-                    <div class="step-card">
-                        <span>01</span>
-                        <h3>Start with one skill block</h3>
-                        <p>Pick listening, reading, writing, or speaking based on your most urgent gap.</p>
+                <h2 class="section-title reveal">Designed for focused,<br><em>distraction-free study.</em></h2>
+                <p class="section-sub reveal">Explore the clean, intuitive interfaces built to guide you through AI
+                    Speaking evaluations, Writing scoring, and authentic practice tests.</p>
+            </div>
+            <div class="screenshots-rail reveal">
+
+                <div class="screenshot-frame">
+                    <img src="app_images/speaking.png" alt="IELTS Speaking Practice screen" loading="lazy">
+                    <span>Speaking Practice</span>
+                </div>
+                <div class="screenshot-frame">
+                    <img src="app_images/ai-feedback.png" alt="AI Speaking Feedback detail screen" loading="lazy">
+                    <span>AI Speaking Score</span>
+                </div>
+                <div class="screenshot-frame">
+                    <img src="app_images/writing.png" alt="IELTS Writing tasks screen" loading="lazy">
+                    <span>Writing Practice</span>
+                </div>
+                <div class="screenshot-frame">
+                    <img src="app_images/resource.png" alt="IELTS Resources and Lessons screen" loading="lazy">
+                    <span>Resource Library</span>
+                </div>
+                <div class="screenshot-frame">
+                    <img src="app_images/listening.png" alt="IELTS Listening practice test screen" loading="lazy">
+                    <span>Listening Tests</span>
+                </div>
+                <div class="screenshot-frame">
+                    <img src="app_images/reading.png" alt="IELTS Reading practice test screen" loading="lazy">
+                    <span>Reading Tests</span>
+                </div>
+                <div class="screenshot-frame">
+                    <img src="app_images/blog.png" alt="Band 9 Preparation Blog screen" loading="lazy">
+                    <span>Band 9 Blog</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ══════════════════════ HOW IT WORKS ════════════════════════════ -->
+        <section id="how-it-works" class="section how-section">
+            <div class="container">
+                <div class="section-label reveal">
+                    <span class="eyebrow-dot"></span>
+                    <span>Simple Weekly Rhythm</span>
+                </div>
+                <h2 class="section-title reveal">From scattered study<br>to a <em>repeatable routine.</em></h2>
+                <p class="section-sub reveal">Three simple steps that turn any spare moment into meaningful IELTS
+                    progress.</p>
+
+                <div class="how-steps">
+                    <div class="how-step reveal">
+                        <div class="how-step-num">01</div>
+                        <div class="how-step-icon">
+                            <img src="app_images/mascot_speaking.png" alt="Choose Speaking or Practice Test">
+                        </div>
+                        <div class="how-step-body">
+                            <h3>Start daily practice</h3>
+                            <p>Pick a Speaking cue card, answer Part 1 questions, draft a Writing essay, or launch
+                                authentic Listening &amp; Reading practice tests.</p>
+                        </div>
                     </div>
-                    <div class="step-card">
-                        <span>02</span>
-                        <h3>Learn from examples</h3>
-                        <p>Review transcripts, sample answers, and guidance before repeating the task.</p>
+                    <div class="how-connector" aria-hidden="true"></div>
+                    <div class="how-step reveal reveal-delay-1">
+                        <div class="how-step-num">02</div>
+                        <div class="how-step-icon">
+                            <img src="app_images/mascot_ai.png" alt="AI Evaluation Engine">
+                        </div>
+                        <div class="how-step-body">
+                            <h3>Get instant AI evaluation</h3>
+                            <p>For Speaking &amp; Writing, receive instant band scoring across Pronunciation, Fluency,
+                                Grammar, and Lexical Resource with actionable feedback.</p>
+                        </div>
                     </div>
-                    <div class="step-card">
-                        <span>03</span>
-                        <h3>Repeat daily in short sessions</h3>
-                        <p>Keep progress moving with practice sessions that fit around work or school.</p>
+                    <div class="how-connector" aria-hidden="true"></div>
+                    <div class="how-step reveal reveal-delay-2">
+                        <div class="how-step-num">03</div>
+                        <div class="how-step-icon">
+                            <img src="app_images/mascot_master.png" alt="Achieve Target Band 9">
+                        </div>
+                        <div class="how-step-body">
+                            <h3>Watch your band climb</h3>
+                            <p>Track your score on My IELTS Journey, target your specific gaps, and celebrate achieving
+                                Band 7.5, 8.0, or 9.0.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ══════════════════════ TESTIMONIALS ═══════════════════════════ -->
+        <section class="section testimonials-section">
+            <div class="container">
+                <div class="testimonials-header reveal">
+                    <div>
+                        <div class="section-label">
+                            <span class="eyebrow-dot"></span>
+                            <span>From Our Learners</span>
+                        </div>
+                        <h2 class="section-title">Loved by 5M+ IELTS<br>test-takers worldwide.</h2>
+                    </div>
+                    <div class="testimonials-mascot-wrap">
+                        <img src="app_images/mascot_love.png" alt="Loved by 5M+ learners"
+                            class="mascot-love-badge float-slow">
+                    </div>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <blockquote>"The AI speaking feedback is an absolute game-changer. I used to be terrified of the
+                            speaking interview, but practising with the AI examiner daily boosted my fluency to Band
+                            8.0!"
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">M</div>
+                            <div>
+                                <strong>Minh T.</strong>
+                                <span>Achieved Speaking 8.0 · Overall 8.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal reveal-delay-1">
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <blockquote>"The pronunciation and fluency breakdowns gave me the exact confidence I needed. The
+                            Listening and Reading practice test packs were almost identical to my actual test."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">S</div>
+                            <div>
+                                <strong>Sara K.</strong>
+                                <span>Achieved Band 9.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card reveal reveal-delay-2">
+                        <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                        <blockquote>"I studied 20 minutes a day during my commute. The instant Writing essay feedback
+                            and Speaking cue cards kept me completely focused. Passed with flying colors for
+                            university."
+                        </blockquote>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">A</div>
+                            <div>
+                                <strong>Arjun P.</strong>
+                                <span>Achieved Band 7.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════ CTA ══════════════════════════════════ -->
         <section class="section cta-section">
-            <div class="container cta-card">
-                <div>
-                    <p class="eyebrow">Ready to practice?</p>
-                    <h2>Study IELTS on your phone with one app for all major skills.</h2>
-                </div>
-                <div class="cta-actions">
-                    <a href="https://play.google.com/store/apps/details?id=com.lt.ieltspracticetest"
-                        class="btn btn-primary" target="_blank" rel="noreferrer">Google Play</a>
-                    <a href="https://apps.apple.com/vn/app/ielts-practice-band-9/id1487374890"
-                        class="btn btn-secondary" target="_blank" rel="noreferrer">App Store</a>
+            <div class="container">
+                <div class="cta-card reveal">
+                    <div class="cta-glow"></div>
+                    <div class="cta-content">
+                        <div class="section-label" style="justify-content:center">
+                            <span class="eyebrow-dot"></span>
+                            <span>Ready to Start?</span>
+                        </div>
+                        <h2>Start your IELTS journey today — free to download.</h2>
+                        <p>Join 5+ million learners practising daily with our AI Speaking Examiner and authentic
+                            practice tests. Available on iPhone and Android.</p>
+                        <div class="cta-actions">
+                            <a href="https://play.google.com/store/apps/details?id=com.lt.ieltspracticetest&amp;referrer=utm_source%3Dieltspracticeonline%26utm_medium%3Dlanding_page%26utm_campaign%3Dcta_download"
+                                class="btn btn-cta-primary" target="_blank" rel="noreferrer">
+                                <span class="material-symbols-outlined" aria-hidden="true">android</span>
+                                Download on Google Play
+                            </a>
+                            <a href="https://apps.apple.com/app/ielts-practice-band-9/id1487374890?utm_source=ieltspracticeonline&amp;utm_medium=landing_page&amp;utm_campaign=cta_download&amp;ct=cta_download"
+                                class="btn btn-cta-secondary" target="_blank" rel="noreferrer">
+                                <span class="material-symbols-outlined" aria-hidden="true">apple</span>
+                                Download on App Store
+                            </a>
+                        </div>
+                        <p class="cta-fine">Free to download · 5M+ Learners · No commitment</p>
+                    </div>
+                    <div class="cta-visual">
+                        <img src="app_images/mascot_master.png" alt="IELTS Band 9 Trophy Mascot"
+                            class="cta-mascot-img float-slow">
+                    </div>
                 </div>
             </div>
         </section>
+
     </main>
 
+    <!-- ══════════════════════════ FOOTER ═════════════════════════════════ -->
     <footer class="site-footer">
         <div class="container footer-grid">
-            <div>
+            <div class="footer-brand">
                 <a class="logo footer-logo" href="index.html">
                     <img src="app_images/app_icon.png" alt="IELTS Practice Band 9 logo">
                     <span>IELTS Practice Band 9</span>
                 </a>
-                <p class="footer-copy">Mobile IELTS preparation with focused practice, examples, and daily study
-                    resources.</p>
+                <p>Mobile IELTS preparation with focused practice, AI feedback, and daily study resources.</p>
+                <div class="footer-stores">
+                    <a href="https://play.google.com/store/apps/details?id=com.lt.ieltspracticetest&amp;referrer=utm_source%3Dieltspracticeonline%26utm_medium%3Dlanding_page%26utm_campaign%3Dfooter_download"
+                        target="_blank" rel="noreferrer" class="footer-store-link">
+                        <span class="material-symbols-outlined">android</span> Google Play
+                    </a>
+                    <a href="https://apps.apple.com/app/ielts-practice-band-9/id1487374890?utm_source=ieltspracticeonline&amp;utm_medium=landing_page&amp;utm_campaign=footer_download&amp;ct=footer_download"
+                        target="_blank" rel="noreferrer" class="footer-store-link">
+                        <span class="material-symbols-outlined">apple</span> App Store
+                    </a>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="index.html">Home</a>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <h4>Product</h4>
                 <a href="#features">Features</a>
-                <a href="contact.html">Contact</a>
-                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="#ai-feedback">AI Feedback</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#download">Download</a>
+            </nav>
+            <nav class="footer-nav" aria-label="Support navigation">
+                <h4>Support</h4>
+                <a href="contact.html">Contact Us</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
-            </div>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </nav>
         </div>
         <div class="container footer-bottom">
             <p>&copy; 2026 LT EduApp. All rights reserved.</p>
+            <p>Built for IELTS learners worldwide.</p>
         </div>
     </footer>
+
+    <script>
+        // ── Scroll-reveal ──────────────────────────────────────────────
+        const revealEls = document.querySelectorAll('.reveal');
+        const revealObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('revealed');
+                    revealObs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => revealObs.observe(el));
+
+        // ── Sticky nav glass effect ────────────────────────────────────
+        const nav = document.getElementById('site-nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('nav-scrolled', window.scrollY > 48);
+        }, { passive: true });
+
+        // ── Mobile hamburger ──────────────────────────────────────────
+        const burger = document.getElementById('nav-burger');
+        const navLinks = document.getElementById('nav-links');
+        burger.addEventListener('click', () => {
+            const open = navLinks.classList.toggle('nav-open');
+            nav.classList.toggle('nav-menu-open', open);
+            burger.setAttribute('aria-expanded', open);
+            burger.classList.toggle('is-open', open);
+        });
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                navLinks.classList.remove('nav-open');
+                nav.classList.remove('nav-menu-open');
+                burger.classList.remove('is-open');
+                burger.setAttribute('aria-expanded', 'false');
+            });
+        });
+    </script>
+
 </body>
 
 </html>
