@@ -121,14 +121,16 @@ form>ol>li:before {
 }
 
 /* Answer choices */
-form ol ol {
+form ol ol,
+ol[type="A"]:has(> li > input[type="radio"]) {
     margin-top: 1rem;
-    padding-left: 0;
+    padding-left: 0 !important;
     list-style: none;
     counter-reset: none;
 }
 
-form ol ol li {
+form ol ol li,
+ol[type="A"] > li:has(> input[type="radio"]) {
     display: flex;
     align-items: center;
     padding: 0.75rem;
@@ -141,25 +143,29 @@ form ol ol li {
     position: relative;
 }
 
-form ol ol li:before {
+form ol ol li:before,
+ol[type="A"] > li:has(> input[type="radio"]):before {
     content: none;
 }
 
-form ol ol li:hover {
+form ol ol li:hover,
+ol[type="A"] > li:has(> input[type="radio"]):hover {
     border-color: #667eea;
     background: #edf2f7;
     transform: translateX(4px);
 }
 
 /* Highlight selected option - Fallback for older iOS (<15.4) */
-form ol ol li.selected {
+form ol ol li.selected,
+ol[type="A"] > li.selected {
     background: #ede9fe;
     border-color: #8b5cf6;
     border-width: 3px;
 }
 
 /* Highlight selected option - Modern browsers (iOS 15.4+) */
-form ol ol li:has(input[type="radio"]:checked) {
+form ol ol li:has(input[type="radio"]:checked),
+ol[type="A"] > li:has(> input[type="radio"]:checked) {
     background: #ede9fe;
     border-color: #8b5cf6;
     border-width: 3px;

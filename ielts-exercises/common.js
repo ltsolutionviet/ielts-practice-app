@@ -7,11 +7,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ==================== RADIO BUTTON SELECTION ====================
 
-    var answerLis = document.querySelectorAll('form ol ol li');
+    var answerLis = document.querySelectorAll('form ol ol li, ol[type="A"] > li');
 
     // Function to update selected state
     function updateSelected(radioInput) {
         // Remove selected class from all options in the same question
+        if (radioInput.name) {
+            var sameNameRadios = document.querySelectorAll('input[type="radio"][name="' + radioInput.name + '"]');
+            sameNameRadios.forEach(function (r) {
+                var li = r.closest('li');
+                if (li) li.classList.remove('selected');
+            });
+        }
         var questionLi = radioInput.closest('form > ol > li');
         if (questionLi) {
             var allOptions = questionLi.querySelectorAll('form ol ol li');
@@ -22,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Add selected class to the parent li of checked radio
         var parentLi = radioInput.closest('li');
-        if (parentLi && radioInput.checked) {
+        if (parentLi && radioInput.checked && parentLi.querySelectorAll('input[type="radio"]').length === 1) {
             parentLi.classList.add('selected');
         }
     }

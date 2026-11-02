@@ -204,20 +204,6 @@
             }
         }
 
-        var b2Btn = document.getElementById('b2');
-        if (b2Btn) b2Btn.onclick = function () {
-            var e = document.getElementById("hint");
-            if (e.style.display == 'block') {
-                document.getElementById("b2").innerHTML = 'Theory <img height="25px" src="../images/plus.png" style="vertical-align: middle"  />';
-                e.style.display = 'none';
-            }
-            else {
-                document.getElementById("b2").innerHTML = 'Theory <img height="25px" src="../images/minus.png" style="vertical-align: middle"  />';
-                e.style.display = 'block';
-            }
-        }
-
-
         function check() {
             var text, score = 0, total = 0;
 
@@ -244,11 +230,8 @@
         }
     </script>
 
-
-
-
-
-
+    <!-- Common JavaScript for exercises -->
+    <script src="../common.js"></script>
 </div>
 </body>
 

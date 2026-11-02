@@ -378,10 +378,9 @@
     <script>
 
       function check(i) {
-        text = "a" + i; text2 = "s" + i;
+        var text = "a" + i, text2 = "s" + i;
         if (document.getElementById(text).checked == true) {
           document.getElementById(text2).innerHTML = '<img align="absmiddle" height=20px src="../images/ok.png"  />';
-          score++;
         }
         else { document.getElementById(text2).innerHTML = '<img align="absmiddle" height=20px src="../images/cross.png"  />'; }
 
