@@ -1,9 +1,47 @@
 /**
  * Common JavaScript for IELTS Exercises
- * Handles radio button selection and audio player controls
+ * Handles theme initialization, radio button selection, and audio player controls
  */
 
+(function () {
+    try {
+        var params = new URLSearchParams(window.location.search);
+        var urlTheme = params.get('theme');
+        if (urlTheme === 'dark' || urlTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', urlTheme);
+            try {
+                sessionStorage.setItem('ielts_theme', urlTheme);
+            } catch (_) {}
+        } else {
+            try {
+                var savedTheme = sessionStorage.getItem('ielts_theme');
+                if (savedTheme === 'dark' || savedTheme === 'light') {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+            } catch (_) {}
+        }
+    } catch (_) {}
+})();
+
 document.addEventListener('DOMContentLoaded', function () {
+
+    // Propagate active theme to internal relative links
+    var activeTheme = document.documentElement.getAttribute('data-theme');
+    if (activeTheme === 'dark' || activeTheme === 'light') {
+        var links = document.querySelectorAll('a[href]');
+        links.forEach(function (link) {
+            var href = link.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('javascript:')) {
+                var parts = href.split('#');
+                var base = parts[0];
+                var hash = parts[1] ? '#' + parts[1] : '';
+                var sep = base.indexOf('?') === -1 ? '?' : '&';
+                if (base.indexOf('theme=') === -1) {
+                    link.setAttribute('href', base + sep + 'theme=' + activeTheme + hash);
+                }
+            }
+        });
+    }
 
     // ==================== RADIO BUTTON SELECTION ====================
 
