@@ -1,39 +1,75 @@
-/* Import Modern Typography */
+/* ==========================================================================
+   Cambridge Reading (C18-C19) Stylesheet (Light & Dark Mode - Synced with AppColors)
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap');
 
 :root {
-    --primary-color: #000000;
-    --primary-light: #f8fafc;
-    --text-main: #000000;
-    --text-muted: #4b5563;
-    --bg-main: #ffffff;
-    --bg-card: #ffffff;
-    --border-color: #e2e8f0;
-    --accent-color: #000000;
-    --success-color: #059669;
+    color-scheme: light;
+    --primary-color: #0F172A;
+    --primary-light: #F8FAFC;
+    --text-main: #1E293B;
+    --text-muted: #475569;
+    --bg-main: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-elevated: #F8FAFC;
+    --border-color: #E2E8F0;
+    --accent-color: #5170FF;
+    --accent-text: #3B5BDB;
+    --success-color: #16A34A;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --primary-color: #F8FAFC;
+    --primary-light: #15161C;
+    --text-main: #E2E8F0;
+    --text-muted: #94A3B8;
+    --bg-main: #0A0E17;
+    --bg-card: #15161C;
+    --bg-elevated: #1E1F26;
+    --border-color: #282932;
+    --accent-color: #7993FF;
+    --accent-text: #9BB0FF;
+    --success-color: #4ADE80;
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) {
+        color-scheme: dark;
+        --primary-color: #F8FAFC;
+        --primary-light: #15161C;
+        --text-main: #E2E8F0;
+        --text-muted: #94A3B8;
+        --bg-main: #0A0E17;
+        --bg-card: #15161C;
+        --bg-elevated: #1E1F26;
+        --border-color: #282932;
+        --accent-color: #7993FF;
+        --accent-text: #9BB0FF;
+        --success-color: #4ADE80;
+    }
+}
+
+html,
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
 }
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     font-size: 16px;
     line-height: 1.7;
-    color: var(--text-main);
     margin: 0;
-    padding: 0;
-    background-color: var(--bg-main);
+    padding: 20px 16px 40px;
     -webkit-font-smoothing: antialiased;
 }
 
 /* Container for all content */
-body>* :not(header) {
+body > *:not(header) {
     max-width: 680px;
     margin-left: auto;
     margin-right: auto;
-}
-
-/* Global Padding */
-body {
-    padding: 20px 16px 40px;
 }
 
 /* Headings */
@@ -52,7 +88,7 @@ h2 {
     font-size: 24px;
     font-weight: 700;
     padding-bottom: 12px;
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--accent-color);
     display: inline-block;
     width: auto;
 }
@@ -60,9 +96,9 @@ h2 {
 h3 {
     font-size: 20px;
     font-weight: 600;
-    background-color: #f8fafc;
+    background-color: var(--bg-elevated);
     padding: 12px 16px;
-    border-left: 4px solid var(--primary-color);
+    border-left: 4px solid var(--accent-color);
     border-radius: 4px;
     margin-top: 2.5em;
 }
@@ -80,11 +116,16 @@ p {
 
 strong {
     font-weight: 600;
-    color: inherit;
+    color: var(--primary-color);
 }
 
-/* Explanation Styling - Custom logic based on content patterns */
-/* Since we don't have a class, we rely on semantic structure */
+code {
+    background-color: var(--bg-elevated);
+    color: var(--accent-text);
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
 
 /* List Styles */
 ul,
@@ -102,7 +143,7 @@ li {
     margin: 24px 0;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #fff;
+    background-color: var(--bg-card);
     border: 1px solid var(--border-color);
 }
 
@@ -114,7 +155,8 @@ li {
     padding: 18px 20px;
     font-size: 17px;
     font-weight: 600;
-    color: #1e293b;
+    color: var(--primary-color);
+    background-color: var(--bg-card);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -123,8 +165,9 @@ li {
 
 .et_pb_toggle_content {
     padding: 20px;
-    background-color: #fff;
-    border-top: 1px solid #f1f5f9;
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border-top: 1px solid var(--border-color);
 }
 
 /* Table Enhancements */
@@ -133,25 +176,39 @@ li {
     border-radius: 12px;
     border: 1px solid var(--border-color);
     overflow: hidden;
-    background: white;
+    background: var(--bg-card);
 }
 
 table {
     width: 100% !important;
     border-collapse: collapse;
+    background-color: var(--bg-card);
+    color: var(--text-main);
 }
 
 th,
 td {
     padding: 14px;
-    border: 1px solid #f1f5f9;
+    border: 1px solid var(--border-color);
     font-size: 15px;
+    color: var(--text-main);
 }
 
 th {
-    background-color: #f8fafc;
+    background-color: var(--bg-elevated);
     font-weight: 600;
-    color: var(--text-muted);
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background-color: #F8FAFC;
+}
+
+html[data-theme="dark"] [style*="color: rgb(4, 110, 181)"] {
+    color: var(--accent-text) !important;
 }
 
 /* Mobile Adjustments */

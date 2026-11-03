@@ -1,31 +1,72 @@
-/* style_c20.css - Modern Premium Styles for Cambridge 20 */
+/* ==========================================================================
+   Cambridge Reading (C20) Stylesheet (Light & Dark Mode - Synced with AppColors)
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap');
 
 :root {
-    --primary-color: #000000;
-    --accent-color: #000000;
-    --primary-light: #f8fafc;
-    --text-main: #000000;
-    --text-muted: #4b5563;
-    --bg-main: #ffffff;
-    --bg-card: #ffffff;
-    --border-color: #e2e8f0;
-    --success-color: #059669;
+    color-scheme: light;
+    --primary-color: #0F172A;
+    --accent-color: #5170FF;
+    --accent-text: #3B5BDB;
+    --primary-light: #F8FAFC;
+    --text-main: #1E293B;
+    --text-muted: #475569;
+    --bg-main: #FFFFFF;
+    --bg-card: #F8FAFC;
+    --bg-elevated: #F1F5F9;
+    --border-color: #E2E8F0;
+    --success-color: #16A34A;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --primary-color: #F8FAFC;
+    --accent-color: #7993FF;
+    --accent-text: #9BB0FF;
+    --primary-light: #15161C;
+    --text-main: #E2E8F0;
+    --text-muted: #94A3B8;
+    --bg-main: #0A0E17;
+    --bg-card: #15161C;
+    --bg-elevated: #1E1F26;
+    --border-color: #282932;
+    --success-color: #4ADE80;
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme="light"]) {
+        color-scheme: dark;
+        --primary-color: #F8FAFC;
+        --accent-color: #7993FF;
+        --accent-text: #9BB0FF;
+        --primary-light: #15161C;
+        --text-main: #E2E8F0;
+        --text-muted: #94A3B8;
+        --bg-main: #0A0E17;
+        --bg-card: #15161C;
+        --bg-elevated: #1E1F26;
+        --border-color: #282932;
+        --success-color: #4ADE80;
+    }
+}
+
+html,
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
 }
 
 body {
     font-family: 'Inter', -apple-system, sans-serif;
     font-size: 16px;
     line-height: 1.8;
-    color: var(--text-main);
     margin: 0;
     padding: 24px 20px 60px;
-    background-color: var(--bg-main);
     -webkit-font-smoothing: antialiased;
 }
 
 /* Max width for readability */
-body>* {
+body > * {
     max-width: 720px;
     margin-left: auto;
     margin-right: auto;
@@ -44,7 +85,7 @@ h4 {
 }
 
 h2 {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
     position: relative;
     padding-bottom: 8px;
@@ -64,7 +105,7 @@ h2::after {
 h3 {
     font-size: 20px;
     font-weight: 600;
-    background-color: #f8fafc;
+    background-color: var(--bg-card);
     padding: 12px 18px;
     border-radius: 8px;
     border: 1px solid var(--border-color);
@@ -74,7 +115,7 @@ h3 {
 h4 {
     font-size: 18px;
     font-weight: 600;
-    color: var(--accent-color);
+    color: var(--accent-text);
 }
 
 /* Content Blocks */
@@ -84,21 +125,41 @@ p {
 
 strong {
     font-weight: 600;
-    color: inherit;
+    color: var(--primary-color);
 }
 
 /* Highlighted Answer/Explanation Blocks */
 p:has(strong) {
     background: var(--bg-card);
     padding: 20px;
-    border-radius: 16px;
+    border-radius: 14px;
     border: 1px solid var(--border-color);
-    transition: transform 0.2s ease;
 }
 
-p:has(strong):hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+/* Tables in C20 */
+table {
+    width: 100% !important;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 12px 14px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    vertical-align: top;
+    color: var(--text-main);
+}
+
+th {
+    background-color: var(--bg-elevated);
+    color: var(--primary-color);
+    font-weight: 700;
 }
 
 /* Custom bullet styling */
@@ -115,7 +176,7 @@ li {
 
 li::before {
     content: "•";
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-weight: bold;
     font-size: 20px;
     position: absolute;
@@ -126,11 +187,11 @@ li::before {
 /* Mobile Optimizations */
 @media (max-width: 480px) {
     body {
-        padding: 20px 16px;
+        padding: 20px 14px;
     }
 
     h2 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     h3 {
@@ -141,5 +202,11 @@ li::before {
     p:has(strong) {
         padding: 16px;
         border-radius: 12px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 14px;
     }
 }
